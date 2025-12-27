@@ -1,6 +1,3 @@
-Here is a GUI-friendly `README.md` file for your **Full Stack AI** project. It includes a structured breakdown of the curriculum, a list of dependencies, and clear setup instructions.
-
-```markdown
 # 🧠 Full Stack AI Journey
 
 Welcome to the **Full Stack AI** repository! This project represents a comprehensive learning path from the fundamentals of Python programming to advanced Machine Learning algorithms, Natural Language Processing (NLP), and Model Deployment.
@@ -69,32 +66,21 @@ Follow these steps to set up the project on your local machine.
 
 ### 1. Clone the Repository
 Download the project to your local drive.
-```
-bash
-git clone <repository-url>
-cd "Full Stack AI"
-```
+bash git clone <repository-url> cd "Full Stack AI"
+
 ### 2. Create a Virtual Environment (Recommended)
 It is best practice to run this project in an isolated environment.
 
 **Windows:**
-```
-bash
-python -m venv venv
-.\venv\Scripts\activate
-```
+bash python -m venv venv .\venv\Scripts\activate
+
 **macOS / Linux:**
-```
-bash
-python3 -m venv venv
-source venv/bin/activate
-```
+bash python3 -m venv venv source venv/bin/activate
+
 ### 3. Install Required Packages
 Run the following command to install all necessary libraries:
-```
-bash
-pip install numpy pandas matplotlib seaborn scikit-learn scipy pymupdf pillow flask fastapi uvicorn joblib nltk
-```
+bash pip install numpy pandas matplotlib seaborn scikit-learn scipy pymupdf pillow flask fastapi uvicorn joblib nltk
+
 ### 4. Database Setup (Optional)
 For the SQL sections in Week 5/6, ensure you have **MySQL** installed. The project includes `dataSources.xml` configured for a local connection:
 *   **Driver:** MySQL Connector
@@ -106,34 +92,24 @@ For the SQL sections in Week 5/6, ensure you have **MySQL** installed. The proje
 
 ### Running Jupyter Notebooks
 To explore the lessons and assignments, start the Jupyter Lab or Notebook server:
-```
-bash
-jupyter notebook
-```
+bash jupyter notebook
 Navigate to specific folders (e.g., `week2/w2_s7/Session 7/`) to open `.ipynb` files.
 
 ### Running the PDF Tool
 To extract images from a PDF, open `pdf_to_img.ipynb`. Ensure you have a `temp/extracted_images` directory or allow the script to create it.
-```
 python
-# Example usage inside the notebook
+Example usage inside the notebook
 extract_images_from_pdf("path/to/your/document.pdf")
-```
+
 ### Deploying Models
 To run the deployment examples in `week3/w3_s16/`:
 
 **Flask:**
-```
-bash
-cd "week3/w3_s16/flask deploy model"
-python app.py
-```
+bash cd "week3/w3_s16/flask deploy model" python app.py
+
 **FastAPI:**
-```
-bash
-cd "week3/w3_s16/fastAPI deploy model"
-uvicorn main:app --reload
-```
+bash cd "week3/w3_s16/fastAPI deploy model" uvicorn main:app --reload
+
 ---
 
 ## 🤝 Contributing
@@ -141,4 +117,3 @@ Feel free to submit issues or pull requests if you find bugs or want to add more
 
 ---
 *Generated for the Full Stack AI Course.*
-```
