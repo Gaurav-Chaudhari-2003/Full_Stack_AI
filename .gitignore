@@ -1,0 +1,44 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ===== Virtual Environments =====
+venv/
+.venv/
+env/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== ML Artifacts =====
+data/
+datasets/
+*.csv
+*.tsv
+*.json
+*.h5
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.onnx
+
+# ===== Logs & Outputs =====
+logs/
+outputs/
+runs/
+checkpoints/
+
+# ===== PyCharm =====
+.idea/
+*.iml
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Experiments =====
+wandb/
+mlruns/
