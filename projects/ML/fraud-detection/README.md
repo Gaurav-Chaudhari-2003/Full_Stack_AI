@@ -1,63 +1,123 @@
 
-# Financial Fraud Detection System
+# 🚨 Financial Fraud Detection System
 
 ## Overview
-This project implements an end-to-end Machine Learning system to detect fraudulent financial transactions in real time. It covers data preprocessing, feature engineering, model training, evaluation, explainability, and deployment via an API.
+An end-to-end Machine Learning system to detect fraudulent financial transactions.  
+Built for **learning purposes** to strengthen ML fundamentals and system thinking.
 
-## Problem Statement
-Financial fraud causes major losses every year. The goal is to build a model that predicts whether a transaction is fraudulent while handling highly imbalanced data and minimizing false positives.
+---
 
-## Dataset
-Credit Card Fraud Dataset (European cardholders).
+## 🎯 Objectives
+- Handle highly imbalanced data
+- Detect fraud with high recall
+- Control false alerts via threshold tuning
+- Validate predictions on real fraud samples
+- Deploy model via API
 
-## Tech Stack
-- Python, Pandas, NumPy
-- Scikit-learn
-- Random Forest, Logistic Regression, Gradient Boosting
-- Isolation Forest for anomaly detection
-- SHAP for explainability
-- MLflow for experiment tracking
-- FastAPI for deployment
+---
 
-## Pipeline
-1. Data loading and cleaning
-2. Feature engineering
-3. Train/test split (stratified)
-4. Model training and tuning
-5. Evaluation using ROC-AUC and Precision-Recall
-6. Explainability using SHAP
-7. API deployment using FastAPI
+## 📊 Dataset
+**Credit Card Fraud Dataset (European cardholders)**  
+- 284,807 transactions  
+- 492 fraud cases (~0.17%)  
+- 30 numerical features + target `Class`  
 
-## Evaluation Metrics
-- ROC-AUC
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
+---
 
-## API
-POST /predict  
-Input: Transaction features  
-Output: Fraud probability
+## 🧰 Tech Stack
+| Area | Tools |
+|------|--------|
+| Language | Python |
+| Data | Pandas, NumPy |
+| Modeling | Scikit-learn |
+| Explainability | SHAP |
+| API | FastAPI |
+| Tracking | MLflow |
+| Serialization | Joblib |
 
-## Folder Structure
+---
+
+## 🔁 ML Pipeline
+1. Load & explore data  
+2. Preprocess & scale  
+3. Handle imbalance  
+4. Train models  
+5. Tune threshold  
+6. Validate on fraud samples  
+7. Explain & deploy  
+
+---
+
+## 📈 Model Performance
+- ROC-AUC ≈ 0.98  
+- Fraud Recall ≈ 99%  
+- Missed Frauds: 4 / 492  
+
+---
+
+## 🗂 Folder Structure
+```
 fraud-detection/
-- data/
-- notebooks/
-- training/
-- api/
-- models/
-- mlruns/
-- README.md
+│
+├── data/
+├── notebooks/
+├── training/
+├── api/
+├── models/
+├── mlruns/
+└── README.md
+```
 
-## How to Run
-1. Install dependencies from requirements.txt
-2. Run the training script
-3. Start API server with FastAPI
-4. Send requests to /predict endpoint
+---
 
-## Results
-The final model achieves high ROC-AUC on imbalanced data and provides explainable predictions.
+## 🔌 API Usage
 
-## Author
-Gaurav Vilas Chaudhari
+Start server:
+```bash
+uvicorn api.main:app --reload
+```
+
+
+POST /predict: example for fraud transaction
+```json
+{
+  "features": [
+    -3.0435406239976, -3.15730712090228, 1.08846277997285, 2.2886436183814,
+    1.35980512966107, -1.06482252298131, 0.325574266158614, -0.0677936531906277,
+    -0.270952836226548, -0.838586564582682, -0.414575448285725, -0.503140859566824,
+    0.676501544635863, -1.69202893305906, 2.00063483909015, 0.666779695901966,
+    0.599717413841732, 1.72532100745514, 0.283344830149495, 2.10233879259444,
+    0.661695924845707, 0.435477208966341, 1.37596574254306, -0.293803152734021,
+    0.279798031841214, -0.145361714815161, -0.252773122530705, 0.0357642251788156,
+    529, 1
+  ]
+}
+
+```
+
+Response:
+```json
+{
+  "fraud_probability": 0.92,
+  "is_fraud": 1
+}
+```
+
+---
+
+## 🧠 Key Learnings
+- Accuracy is misleading for anomaly detection
+- Precision vs Recall is a risk trade-off
+- Threshold defines system behavior
+- Validation matters more than metrics
+
+---
+
+## 👤 Author
+**Gaurav Vilas Chaudhari**  
+B.E. Computer Science & Engineering  
+
+---
+
+## ⚠️ Disclaimer
+Educational project only. Not intended for production or financial decisions.
