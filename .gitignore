@@ -24,6 +24,8 @@ datasets/
 *.pt
 *.pth
 *.onnx
+*.png
+*.pdf
 
 # ===== Logs & Outputs =====
 logs/
@@ -42,7 +44,3 @@ Thumbs.db
 # ===== Experiments =====
 wandb/
 mlruns/
-
-
-# ===== PDF =====
-*.pdf
