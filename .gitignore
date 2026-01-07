@@ -26,6 +26,7 @@ datasets/
 *.onnx
 *.png
 *.pdf
+*.keras
 
 # ===== Logs & Outputs =====
 logs/
