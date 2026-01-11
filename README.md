@@ -1,4 +1,4 @@
-# 🧠 Full Stack AI Journey
+# Full Stack AI Journey
 
 Welcome to the **Full Stack AI** repository! This project represents a comprehensive learning path from the fundamentals of Python programming to advanced Machine Learning algorithms, Natural Language Processing (NLP), and Model Deployment.
 
