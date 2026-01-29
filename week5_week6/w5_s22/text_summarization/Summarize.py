@@ -40,11 +40,15 @@ def nlp(text : str):
                     sentence_values[s] += word_freq[word]
     
     
-    summary = heapq.nlargest(2, sentence_values, key=sentence_values.get)
+    summary = heapq.nlargest(3, sentence_values, key=sentence_values.get)
     summary = ' '.join(summary)
 
 
-    return{'summary' : summary}
+    return{
+        'Original Text Length:' : len(text),
+        'Summary Length:' : len(summary),
+        'summary' : summary
+    }
 
 
 
